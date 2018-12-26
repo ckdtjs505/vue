@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>hello Vue</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+      <div id = "app">
+        <h1>This is me </h1>
+        <ul class = "list-group">
+          <li v-for= "(story, key, index) in stories" class="list-group-item">
+            {{index}} : {{key}} : {{story}}
+          </li>
+        </ul>
+      </div>
+      <pre>{{ $data }}</pre>
+
+    </div>
+
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+  <script>
+    new Vue({
+      el: '.container',
+      data : {
+          stories:{
+            name : 'Kosta',
+            height  : '1.73',
+            weigh : '65',
+            eyeColor : 'brown',
+            favoriteFood : 'Ntolmas'
+        }
+      }
+    })
+  </script>
+</html>
